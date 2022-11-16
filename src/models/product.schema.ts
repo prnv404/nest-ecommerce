@@ -5,8 +5,18 @@ export const ProductSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
   },
+
   title: String,
+
   description: String,
+
   image: String,
+
   price: String,
+
+  product: [
+    {
+      productName: String,
+    },
+  ],
 });
